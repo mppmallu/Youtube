@@ -1,4 +1,4 @@
-Based on the log you've provided, here is a list of commands you used to push your data to the GitHub repository, ordered sequentially:
+ list of commands I used to push my data to the GitHub repository, ordered sequentially:
 
 1. **Initialize Git Repository (if not already initialized):**
    ```bash
