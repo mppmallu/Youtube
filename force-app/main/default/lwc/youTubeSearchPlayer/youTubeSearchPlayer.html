@@ -1,0 +1,33 @@
+<template>
+    <lightning-card title="YouTube Video Search" icon-name="utility:search">
+        <div class="slds-m-around_medium">
+            <lightning-input
+                label="Search YouTube Videos"
+                value={searchQuery}
+                onchange={handleSearchQueryChange}
+                placeholder="Enter search term"
+                class="slds-m-bottom_medium"
+            ></lightning-input>
+            <lightning-button label="Search" onclick={handleSearch} class="slds-m-bottom_medium"></lightning-button>
+            <template if:true={videos}>
+                <ul>
+                    <template for:each={videos} for:item="video">
+                        <li key={video.id.videoId} class="slds-m-bottom_medium">
+                            <a href="#" onclick={handleVideoSelect} data-video-id={video.id.videoId}>{video.snippet.title}</a>
+                        </li>
+                    </template>
+                </ul>
+            </template>
+            <template if:true={selectedVideoId}>
+                <iframe
+                    src={iframeSrc}
+                    width="560"
+                    height="315"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen
+                ></iframe>
+            </template>
+        </div>
+    </lightning-card>
+</template>
