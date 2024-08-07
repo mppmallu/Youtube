@@ -1,18 +1,47 @@
-# Salesforce DX Project: Next Steps
+Based on the log you've provided, here is a list of commands you used to push your data to the GitHub repository, ordered sequentially:
 
-Now that you’ve created a Salesforce DX project, what’s next? Here are some documentation resources to get you started.
+1. **Initialize Git Repository (if not already initialized):**
+   ```bash
+   git init
+   ```
 
-## How Do You Plan to Deploy Your Changes?
+2. **Check Status:**
+   ```bash
+   git status
+   ```
 
-Do you want to deploy a set of changes, or create a self-contained application? Choose a [development model](https://developer.salesforce.com/tools/vscode/en/user-guide/development-models).
+3. **Add Files to Staging Area:**
+   ```bash
+   git add force-app/main/default/classes/YouTubeController.cls
+   ```
 
-## Configure Your Salesforce DX Project
+4. **Commit Staged Changes:**
+   ```bash
+   git commit -m 'youtube search lwc and apex conntroller class'
+   ```
 
-The `sfdx-project.json` file contains useful configuration information for your project. See [Salesforce DX Project Configuration](https://developer.salesforce.com/docs/atlas.en-us.sfdx_dev.meta/sfdx_dev/sfdx_dev_ws_config.htm) in the _Salesforce DX Developer Guide_ for details about this file.
+5. **Create a New Branch:**
+   ```bash
+   git checkout -b scratchBranch
+   ```
 
-## Read All About It
+6. **Add Remote Repository URL:**
+   ```bash
+   git remote add origin https://github.com/mppmallu/Youtube.git
+   ```
 
-- [Salesforce Extensions Documentation](https://developer.salesforce.com/tools/vscode/)
-- [Salesforce CLI Setup Guide](https://developer.salesforce.com/docs/atlas.en-us.sfdx_setup.meta/sfdx_setup/sfdx_setup_intro.htm)
-- [Salesforce DX Developer Guide](https://developer.salesforce.com/docs/atlas.en-us.sfdx_dev.meta/sfdx_dev/sfdx_dev_intro.htm)
-- [Salesforce CLI Command Reference](https://developer.salesforce.com/docs/atlas.en-us.sfdx_cli_reference.meta/sfdx_cli_reference/cli_reference.htm)
+7. **Push Changes to Remote Repository on the New Branch:**
+   ```bash
+   git push -u origin scratchBranch
+   ```
+
+### Summary of Commands:
+1. `git init`
+2. `git status`
+3. `git add force-app/main/default/classes/YouTubeController.cls`
+4. `git commit -m 'youtube search lwc and apex conntroller class'`
+5. `git checkout -b scratchBranch`
+6. `git remote add origin https://github.com/mppmallu/Youtube.git`
+7. `git push -u origin scratchBranch`
+
+These steps include initializing a Git repository (if needed), adding files to staging, committing those changes, creating a new branch, adding a remote repository, and pushing the new branch to the remote repository on GitHub.
